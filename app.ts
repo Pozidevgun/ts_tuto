@@ -1,24 +1,21 @@
 // lesson 3 
-// interface
-interface User{
-    name: string,
-    age: number,
-    skills: string[],
-    log:(id:number)=> string
-}
-interface Role {
-    roleId: number
-}
-interface UserWithRole extends User,Role{
-    
-}
-// interface UserWithRole extends User{
-//     roleId: number 
+// interface vs type
+// interface User{
+//     name: string
 // }
-let user:UserWithRole ={
-    name: 'sdfasdf',
-    age: 23,
-    skills: ['dasd','asfdd'],
-    roleId: 2,
-    log:(id)=> ''
+// interface User{
+//     age: number
+// }
+// //можно соединять
+// const user: User = {
+//     name: 'as',
+//        age: 22
+// }
+type IDI = string | number
+type User = {
+    name: string
+}
+//можно соединять
+const user: User = {
+    name: 'as'
 }
