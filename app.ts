@@ -12,10 +12,11 @@
 //        age: 22
 // }
 type IDI = string | number
+// или и 
 type User = {
-    name: string
+    name: string | number
 }
-//можно соединять
+//можно соединять 
 const user: User = {
     name: 'as'
 }
