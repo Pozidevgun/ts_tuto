@@ -1,12 +1,31 @@
 // lesson 3 
-// Literal type
-function fetchWithAuth(url: string, method: 'post' | 'get'): 1 | -1{
-    return 1
+// Type Aliases
+// type httpMethod = 'post' | ' get';
+
+// type coolString = string;
+// function fetchWithAuth(url: coolString, method: httpMethod): 1 | -1{
+//     return 1
+// }
+
+type User = {
+    name: string,
+    age: number,
+    skills: string[]
 }
-// fetchWithAuth('sdf', 'post')
-// fetchWithAuth('sdf', 's')
-// let a:'sadfasddsa'  = 'sadfasddsa'; нельзя переименовать из-за литерального типа
-// a = 'asfdasf'
-let method = 'post';
-fetchWithAuth('s',method as 'post') 
-// использовать as только если точно знает что ничего другого (значения) бить не может єто приведения к виду 
+let user: User = {
+    name: 'asd',
+    age: 34,
+    skills:['sdfasff','fsdfsdf']
+}
+type Role = {
+    id: number
+}
+type FullUser  = User & Role
+
+// type fullUser  = User | Role
+let user1: FullUser = {
+    name: 'asd',
+    age: 34,
+    skills:['sdfasff','fsdfsdf'],
+    id: 1
+}
