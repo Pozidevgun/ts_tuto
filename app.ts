@@ -11,7 +11,7 @@
 // const arr1: ReadonlyArray<string>  = ['1', 'dev'];
 enum StatusCode{
     SUCCESS = 1,
-    IN_PROCESS = 3,
+    IN_PROCESS = 3, 
     FAILED
 } 
 const res = {
