@@ -1,26 +1,12 @@
 // lesson 3 
-// Union type
-function logId(id:string | number | boolean){
-    if (typeof id === 'string'){
-        console.log(id)
-    }else if (typeof id === 'number'){
-        console.log(id)
-    }else{
-        console.log(id)
-    }
-    
+// Literal type
+function fetchWithAuth(url: string, method: 'post' | 'get'): 1 | -1{
+    return 1
 }
-function logError(err: string | string[]){
-    if(Array.isArray(err)){
-        console.log(err)
-    }else{
-        console.log(err)
-    }
-}
-function logObject(obj: {a: number} | {b: number}){
-    if('a' in obj){
-        console.log(obj.a)
-    }else{
-        console.log(obj.b)
-    }
-}
+// fetchWithAuth('sdf', 'post')
+// fetchWithAuth('sdf', 's')
+// let a:'sadfasddsa'  = 'sadfasddsa'; нельзя переименовать из-за литерального типа
+// a = 'asfdasf'
+let method = 'post';
+fetchWithAuth('s',method as 'post') 
+// использовать as только если точно знает что ничего другого (значения) бить не может єто приведения к виду 
